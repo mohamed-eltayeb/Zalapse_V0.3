@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Register
+  form(method="post" action="/register")
+    label(for="username") Username:
+    input(type="text" id="username" name="username" required=true)
+    
+    label(for="password") Password:
+    input(type="password" id="password" name="password" required=true)
+    
+    label(for="role") Role:
+    select(name="role" id="role" required=true)
+      option(value="Admin") Admin
+      option(value="Developer") Developer
+      option(value="ProjectUser") Project User
+
+    button(type="submit") Register

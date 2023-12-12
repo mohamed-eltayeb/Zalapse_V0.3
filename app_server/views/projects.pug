@@ -1,0 +1,17 @@
+extends layout
+
+block title
+  title List Of Projects
+
+block content
+  .container.mt-3
+    h1 List Of Projects
+    .row
+      each project in projects
+        .col-md-4.mb-3
+          .card
+            img.card-img-top(src=project.logo, alt='Project Logo')
+            .card-body
+              h5.card-title= project.name
+              p.card-text= project.description
+              a.btn.btn-primary(href=`/cams/${project.project_id}`) View Cameras

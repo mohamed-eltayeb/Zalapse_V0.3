@@ -1,0 +1,13 @@
+extends layout
+
+block title
+  title Cam ImageView
+
+block content
+  .container.mt-3
+    h1 Cam ImageView
+    .row
+      .col-md-8
+        img.img-fluid(src='/path/to/latest/image.jpg', alt='Latest Image')
+      .col-md-4
+        // Add your timeline, notes, and other actions here

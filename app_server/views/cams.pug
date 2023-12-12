@@ -1,0 +1,17 @@
+extends layout
+
+block title
+  title List Of Cams
+
+block content
+  .container.mt-3
+    h1 List Of Cams
+    .row
+      each cam in cams
+        .col-md-4.mb-3
+          .card
+            img.card-img-top(src='/path/to/cam/image.jpg', alt='Cam Image')
+            .card-body
+              h5.card-title= cam.name
+              p.card-text= cam.description
+              a.btn.btn-primary(href=`/camview/${cam.cam_id}`) View Camera

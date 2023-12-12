@@ -1,0 +1,17 @@
+extends layout
+
+block title
+  title List Of Developers
+
+block content
+  .container.mt-3
+    h1 List Of Developers
+    .row
+      each developer in developers
+        .col-md-4.mb-3
+          .card
+            img.card-img-top(src=developer.logo, alt='Developer Logo')
+            .card-body
+              h5.card-title= developer.name
+              p.card-text= developer.description
+              a.btn.btn-primary(href=`/projects/${developer.developer_id}`) View Projects

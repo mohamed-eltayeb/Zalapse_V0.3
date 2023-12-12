@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    // Include Bootstrap CSS and any other stylesheets
+    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block head
+  // rest of the layout.jade
+
+
+  body
+    header
+      // Bootstrap Navbar
+    .nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        .container-fluid
+          a.navbar-brand(href='#') Map View
+          button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+              li.nav-item
+                a.nav-link(href='#') Notifications
+              // Add other navbar items here
+
+    block content
+
+    footer
+      // Footer Content
+      .container
+        p Developed by ZA
+
+    // Include jQuery, Bootstrap JS, and any other scripts
+    script(src='/jquery-3.7.1.min.js')
+    script(src='/bootstrap.bundle.min.js')
+    block scripts
